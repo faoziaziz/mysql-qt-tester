@@ -53,10 +53,10 @@ void tester_db_1(){
         /* Try to command line simple */
         QString cmd;
         /* command prepare for execute */
-        cmd = "select * from NeiraIklanVer3 where id = :id";
+        cmd = "select * from NeiraIklanVer2 Where (NO = (select min(NO) from NeiraIklanVer3) and Flag=:flag);";
         QSqlQuery query;
         query.prepare(cmd);
-        query.bindValue(":id", 1);
+        query.bindValue(":flag", 0);
         query.exec();
 
         /* reading from variable */
