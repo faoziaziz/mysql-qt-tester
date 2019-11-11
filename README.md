@@ -7,4 +7,3 @@
 |password |tappingbox123|
 |database |Trumon|
 |port     |3306|
-"# mysql-qt-tester" 
