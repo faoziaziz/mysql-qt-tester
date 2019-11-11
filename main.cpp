@@ -10,6 +10,8 @@
 void tester_db(int i, QString check);
 /* for tutorial testing database */
 void tester_db_1();
+/* for tester_db_1 akan menjadi setting database */
+void tester_db_2();
 
 int main(int argc, char *argv[])
 {
@@ -17,10 +19,17 @@ int main(int argc, char *argv[])
     qInfo()<<"just for testing";
 
     tester_db_1();
+    //tester_db_2();
     return a.exec();
 }
+void tester_db_2(){
+    qInfo()<<"Database testing for second";
 
-
+}
+/*
+ * retval nya void
+ * descriptionnya untuk testing dengan database yang pertama.
+*/
 
 void tester_db_1(){
     qInfo()<<"menjadi sampah";
@@ -49,10 +58,14 @@ void tester_db_1(){
         query.prepare(cmd);
         query.bindValue(":id", 1);
         query.exec();
+
         /* reading from variable */
-        QString value0 = query.value(0).toString();
-        qInfo()<<"Value 0 : "<<value0;
-        qInfo() << "Connected, lets make a query...";
+        while(query.next()){
+            QString value0 = query.value(0).toString();
+            qInfo()<<"Value 0 : "<<value0;
+            qInfo() << "Connected, lets make a query...";
+
+        }
 
 
         db.close();
@@ -60,6 +73,7 @@ void tester_db_1(){
 
     }
 }
+
 /*
  *      retval : void
  *      Description: to check connection with mysql
