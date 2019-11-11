@@ -23,9 +23,9 @@ int main(int argc, char *argv[])
 void tester_db(int i,  QString check){
     qInfo()<<"Function called";
     QString Hostname = "localhost";
-    QString Username = "username";
-    QString Password = "password";
-    QString Database = "database";
+    QString Username = "trumon";
+    QString Password = "tappingbox123";
+    QString Database = "Trumon";
     int port = 3306;
 
     /* Standard call for mysql database */
