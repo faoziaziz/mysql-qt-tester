@@ -6,6 +6,9 @@
 #include<QPluginLoader>
 #include<QVariant>
 
+/* Kamu croot banget deh */
+void tester_db(int i, QString check);
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
