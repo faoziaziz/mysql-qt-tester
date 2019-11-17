@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
     qInfo()<<"just for testing";
-
+    qInfo()<<"Test database 3";
    // tester_db_1();
     tester_db_3();
     //tester_db_2();
