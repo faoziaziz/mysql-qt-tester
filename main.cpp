@@ -20,7 +20,8 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
     qInfo()<<"just for testing";
 
-    tester_db_1();
+   // tester_db_1();
+    tester_db_3();
     //tester_db_2();
     return a.exec();
 }
@@ -129,6 +130,8 @@ void tester_db(int i,  QString check){
 }
 
 void tester_db_3(){
+    
+    /* QSql database to setting connection */
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("localhost");
     db.setUserName("trumon");
